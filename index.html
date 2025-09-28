@@ -80,29 +80,39 @@
       <div class="step"><strong>Step 3:</strong> Laminated & shipped to you</div>
     </section>
 
-    <section id="order">
+    <section id="order" method="Post" >
       <div class="order-card">
         <h3 style="margin-top:0">Place an Order</h3>
+<form id="order-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID" enctype="multipart/form-data">
+      <label for="fname">Full name</label>
+      <input type="text" id="fname" name="name" placeholder="Your name" required />
 
-        <label for="fname">Full name</label>
-        <input type="text" id="fname" placeholder="Your name" />
+      <label for="email">Email or phone (for updates)</label>
+      <input type="text" id="email" name="email" placeholder="Email or WhatsApp number" required />
 
-        <label for="email">Email or phone (for updates)</label>
-        <input type="text" id="email" placeholder="Email or WhatsApp number" />
+      <label for="file">Upload photo</label>
+      <input type="file" id="file" name="photo" accept="image/*" />
 
-        <label for="file">Upload photo</label>
-        <input type="file" id="file" accept="image/*" />
-        <div id="preview" style="margin-top:8px"></div>
+      <input type="text" id="promo" placeholder="Enter code (e.g. ART10)" />
+         <button type="button" class="apply-btn" onclick="applyPromo()">Apply</button>
 
-        <div class="price-row">
+      <div class="price-row">
+        <div>Price</div>
+        <div><strong id="price">₹299</strong></div>
+      </div>
+
+      <button type="submit" class="cta">Submit Order</button>
+    </form>
+
+        <!-- <div class="price-row">
           <div>Price</div>
           <div><strong id="price">₹299</strong></div>
-        </div>
+        </div> -->
 
-        <label for="promo">Promo code</label>
+        <!-- <label for="promo">Promo code</label>
         <div class="promo-row">
           <input type="text" id="promo" placeholder="Enter code (e.g. ART10)" />
-         <button type="button" class="apply-btn" onclick="applyPromo()">Apply</button>
+         <button type="button" class="apply-btn" onclick="applyPromo()">Apply</button> -->
 
         </div>
         <div id="promo-msg" style="font-size:13px;color:var(--muted);margin-top:8px"></div>
