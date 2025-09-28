@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ArtByAkash — Mini Portrait Commissions</title>
+  <style>
+    :root{
+      --pink:#3B0270;
+      --purple:#6F00FF;
+      --black:#0b0b0b;
+      --card:#1a1a1a;
+      --text:#f1f1f1;
+      --muted:#FFF1F1;
+    }
+    *{box-sizing:border-box;font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+    body{margin:0;background:linear-gradient(180deg,var(--black) 0%, #141014 100%);color:var(--text);overflow-x:hidden}
+    header{padding:28px 20px;text-align:center;border-bottom:1px solid #222;}
+    .logo{width:72px;height:72px;border-radius:18px;background:linear-gradient(135deg,var(--pink),var(--purple));display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:22px;margin:0 auto}
+    h1{margin:12px 0 4px;font-size:26px}
+    .tag{color:var(--muted);font-size:14px}
+
+    .container{max-width:640px;margin:0 auto;padding:20px}
+    section{margin-top:40px;}
+
+    .cta{background:linear-gradient(90deg,var(--pink),var(--purple));border:none;color:#fff;padding:14px 18px;border-radius:12px;font-weight:700;cursor:pointer;width:100%;margin-top:12px;transition:opacity 0.3s}
+    .cta:hover{opacity:0.85}
+
+    .order-card{background:var(--card);padding:20px;border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,0.7);}
+    label{display:block;font-size:13px;margin-top:12px;color:var(--text)}
+    input[type=text], input[type=email], input[type=file], textarea, select{width:100%;padding:10px;border-radius:8px;border:1px solid #333;background:#111;color:var(--text);margin-top:6px}
+
+    .price-row{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+    .promo-row{display:flex;gap:8px;margin-top:8px}
+    .apply-btn{padding:10px 12px;border-radius:8px;border:1px solid #444;background:#222;color:var(--text);cursor:pointer;width:100%;transition:background 0.3s}
+    .apply-btn:hover{background:#333}
+
+    .qr-box{margin-top:16px;text-align:center}
+    .qr-box img{max-width:200px;width:100%;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.8);}
+
+    .showcase{display:flex;flex-direction:column;gap:12px;margin-top:16px}
+    .mock{background:#262626;border-radius:12px;padding:20px;text-align:center;min-height:120px;color:var(--muted)}
+
+    .step{background:#141014;padding:14px;border-radius:12px;margin-top:12px;text-align:center}
+
+    .testimonial-card, .review-card{background:var(--card);border-left:4px solid var(--pink);padding:16px 20px;border-radius:12px;margin-top:16px;box-shadow:0 4px 12px rgba(0,0,0,0.6);transition:transform 0.3s;}
+    .testimonial-card:hover, .review-card:hover{transform:translateY(-4px)}
+    .testimonial-author, .review-author{color:var(--pink);font-weight:600;margin-bottom:6px}
+    .testimonial-text, .review-text{color:var(--muted);font-size:14px;line-height:1.5}
+
+    .submit-review{margin-top:20px}
+    .submit-review button{margin-top:10px}
+
+    footer{padding:24px;text-align:center;color:var(--muted);font-size:13px;margin-top:40px;border-top:1px solid #222;}
+
+    /* Animations */
+    .animate{opacity:0; transform: translateY(40px); transition: all 0.8s ease-out;}
+    .animate.show{opacity:1; transform: translateY(0);}
+  </style>
+</head>
+<body>
+  <header class="animate">
+    <div class="logo">A</div>
+    <h1>ArtByAkash</h1>
+    <div class="tag">Hand-drawn 10×10 cm mini portrait sketches</div>
+  </header>
+
+  <main class="container">
+    <section class="animate">
+      <h2 style="text-align:center">Your Photo → My Art</h2>
+      <p style="text-align:center;color:var(--muted)">Tiny portraits laminated & perfect for gifts, keychains, or keepsakes.</p>
+      <button class="cta" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Now — ₹299</button>
+    </section>
+
+    <section class="showcase animate">
+      <div class="mock">Sample 1</div>
+      <div class="mock">Sample 2</div>
+      <div class="mock">Sample 3</div>
+    </section>
+
+    <section class="animate">
+      <div class="step"><strong>Step 1:</strong> Upload your photo</div>
+      <div class="step"><strong>Step 2:</strong> I draw it by hand</div>
+      <div class="step"><strong>Step 3:</strong> Laminated & shipped to you</div>
+    </section>
+
+    <section id="order" class="animate">
+      <div class="order-card">
+        <h3 style="margin-top:0">Place an Order</h3>
+        <label for="fname">Full name</label>
+        <input type="text" id="fname" placeholder="Your name" />
+        <label for="email">Email or phone (for updates)</label>
+        <input type="text" id="email" placeholder="Email or WhatsApp number" />
+        <label for="file">Upload photo</label>
+        <input type="file" id="file" accept="image/*" />
+        <div id="preview" style="margin-top:8px"></div>
+        <div class="price-row">
+          <div>Price</div>
+          <div><strong id="price">₹299</strong></div>
+        </div>
+        <label for="promo">Promo code</label>
+        <div class="promo-row">
+          <input type="text" id="promo" placeholder="Enter code (e.g. ART10)" />
+          <button class="apply-btn" onclick="applyPromo()">Apply</button>
+        </div>
+        <div id="promo-msg" style="font-size:13px;color:var(--muted);margin-top:8px"></div>
+        <div class="qr-box">
+          <div style="font-size:13px;color:var(--muted);margin-bottom:6px">Scan & Pay UPI</div>
+          <img id="qr" src="qr-299.png" alt="UPI QR Code" />
+        </div>
+        <button class="cta" onclick="startCheckout()">Pay & Confirm</button>
+        <div style="font-size:12px;color:var(--muted);margin-top:12px">Delivery within 3–5 days. Limited orders daily.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="animate">
+    © ArtByAkash — Handmade mini portraits • DM on Instagram @ArtByAkash
+  </footer>
+
+  <script>
+    function revealWithDelay(){
+      const elements = document.querySelectorAll('.animate');
+      elements.forEach((el, i)=>{
+        if(el.getBoundingClientRect().top < window.innerHeight - 60){
+          setTimeout(()=> el.classList.add('show'), i * 20); // delay each element by 200ms multiplied by index
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealWithDelay);
+    window.addEventListener('load', revealWithDelay);
+
+    const BASE_PRICE = 299;
+    let currentPrice = BASE_PRICE;
+
+    function applyPromo(){
+      const code = document.getElementById('promo').value.trim().toUpperCase();
+      const msg = document.getElementById('promo-msg');
+      const qr = document.getElementById('qr');
+      if(!code){ msg.innerText='Enter a code.'; return; }
+      if(code === 'ART10'){
+        currentPrice = Math.round(BASE_PRICE * 0.9);
+        document.getElementById('price').innerText = '₹' + currentPrice + ' (10% off)';
+        msg.innerText = 'Promo applied — 10% discount.';
+        qr.src = 'qr-269.png';
+      } else if(code === 'FREESHIP'){
+        currentPrice = BASE_PRICE;
+        document.getElementById('price').innerText = '₹' + currentPrice + ' (Free shipping)';
+        msg.innerText = 'Free shipping applied.';
+        qr.src = 'qr-299.png';
+      } else {
+        msg.innerText='Invalid code.';
+        qr.src = 'qr-299.png';
+      }
+    }
+
+    const file = document.getElementById('file');
+    file.addEventListener('change', (e)=>{
+      const f = e.target.files[0];
+      const pr = document.getElementById('preview'); pr.innerHTML='';
+      if(!f) return;
+      const img = document.createElement('img');
+      img.style.maxWidth='100%';img.style.borderRadius='8px';
+      img.style.boxShadow='0 8px 24px rgba(0,0,0,0.6)';
+      pr.appendChild(img);
+      const reader = new FileReader();
+      reader.onload = ()=> img.src = reader.result;
+      reader.readAsDataURL(f);
+    });
+
+    function startCheckout(){
+      const name = document.getElementById('fname').value.trim();
+      const contact = document.getElementById('email').value.trim();
+      if(!name || !contact){ alert('Please add your name and contact.'); return; }
+      alert('This is a demo. Replace startCheckout() with your Razorpay/UPI integration.');
+    }
+  </script>
+</body>
+</html>
