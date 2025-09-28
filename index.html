@@ -187,25 +187,25 @@
       }
     }
 
-    const file = document.getElementById('file');
-    file.addEventListener('change', (e)=>{
-      const f = e.target.files[0];
-      const pr = document.getElementById('preview'); pr.innerHTML='';
-      if(!f) return;
-      const img = document.createElement('img');
-      img.style.maxWidth='100%';img.style.borderRadius='8px';
-      img.style.boxShadow='0 8px 24px rgba(0,0,0,0.6)';
-      pr.appendChild(img);
-      const reader = new FileReader();
-      reader.onload = ()=> img.src = reader.result;
-      reader.readAsDataURL(f);
-    });
+    // const file = document.getElementById('file');
+    // file.addEventListener('change', (e)=>{
+    //   const f = e.target.files[0];
+    //   const pr = document.getElementById('preview'); pr.innerHTML='';
+    //   if(!f) return;
+    //   const img = document.createElement('img');
+    //   img.style.maxWidth='100%';img.style.borderRadius='8px';
+    //   img.style.boxShadow='0 8px 24px rgba(0,0,0,0.6)';
+    //   pr.appendChild(img);
+    //   const reader = new FileReader();
+    //   reader.onload = ()=> img.src = reader.result;
+    //   reader.readAsDataURL(f);
+    // });
 
     function startCheckout(){
       const name = document.getElementById('fname').value.trim();
       const contact = document.getElementById('email').value.trim();
       if(!name || !contact){ alert('Please add your name and contact.'); return; }
-      alert('This is a demo. Replace startCheckout() with your Razorpay/UPI integration.');
+      alert('Thank you for your Order , We\'ll reach you soon [max.5hrs].');
     }
   </script>
     // function submitReview(){
