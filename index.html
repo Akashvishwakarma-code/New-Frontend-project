@@ -208,15 +208,15 @@
       alert('This is a demo. Replace startCheckout() with your Razorpay/UPI integration.');
     }
 
-    function submitReview(){
-      const name = document.getElementById('review-name').value.trim();
-      const stars = document.getElementById('review-stars').value;
-      const text = document.getElementById('review-text').value.trim();
-      if(!name || !text){ alert('Please fill all fields'); return; }
-      const container = document.getElementById('new-reviews');
-      const card = document.createElement('div');
-      card.className = 'review-card';
-      card.innerHTML = `<div class='review-author'>${name} ${'⭐'.repeat(stars)}</div><div class='review-text'>${text}</div>`;
-      container.prepend(card);
-      document.getElementById('review-name').value='';
-      document.getElementById
+    // function submitReview(){
+    //   const name = document.getElementById('review-name').value.trim();
+    //   const stars = document.getElementById('review-stars').value;
+    //   const text = document.getElementById('review-text').value.trim();
+    //   if(!name || !text){ alert('Please fill all fields'); return; }
+    //   const container = document.getElementById('new-reviews');
+    //   const card = document.createElement('div');
+    //   card.className = 'review-card';
+    //   card.innerHTML = `<div class='review-author'>${name} ${'⭐'.repeat(stars)}</div><div class='review-text'>${text}</div>`;
+    //   container.prepend(card);
+    //   document.getElementById('review-name').value='';
+    //   document.getElementById
