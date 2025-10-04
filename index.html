@@ -1,200 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Art by Akash - Custom Portrait Sketches</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <header id="hero">
-        <nav class="container">
-            <div class="logo">
-                <img src="./images/photodefault.jpeg" alt="Art by Akash Logo" class="logo-img">
-                <span class="logo-text"><span class="logo-accent">A</span>rt by Akash</span>
-            </div>
-            <button class="hamburger-menu" aria-label="Toggle navigation" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <ul id="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#prices">Prices</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero-content container">
-            <h1 class="accent-text">Your Story, Hand-Sketched.</h1>
-            <h2>Custom Portraits, Mini & Full Sketches.</h2>
-            <div class="hero-ctas">
-                <a href="#portfolio" class="cta-primary">View My Portfolio</a>
-                <a href="#contact" class="cta-secondary">Start Your Commission</a>
-            </div>
+      <nav class="container">
+        <div class="logo">
+          <img
+            src="./images/photodefault.jpeg"
+            alt="Art by Akash Logo"
+            class="logo-img"
+          />
+          <span class="logo-text"
+            ><span class="logo-accent">A</span>rt by Akash</span
+          >
         </div>
+        <button
+          class="hamburger-menu"
+          aria-label="Toggle navigation"
+          onclick="toggleMenu()"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#prices">Prices</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content container">
+        <h1 class="accent-text">Your Story, Hand-Sketched.</h1>
+        <h2>Custom Portraits, Mini & Full Sketches.</h2>
+        <div class="hero-ctas">
+          <a href="#portfolio" class="cta-primary">View My Portfolio</a>
+          <a href="#contact" class="cta-secondary">Start Your Commission</a>
+        </div>
+      </div>
     </header>
-    
+
     <main>
-        <section id="about" class="container section-padding">
-            <h2 class="section-title">The Art of Personal Connection</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p style="margin:15px">Hi, I'm Akash, and I believe a portrait is more than just a drawing—it's a captured emotion. Specializing in **pencil and charcoal portraits**, I bring a focus on **hyper-realistic detail** and capturing the unique character behind every face. I work from high-quality photographs to create timeless, custom pieces—perfect for gifts or personal keepsakes.</p>
-                    <p style="margin:15px">I primarily use professional-grade graphite and charcoal on archival paper. My style blends classic realism with meticulous attention to light and shadow, giving each sketch a **rich, almost photographic depth** while retaining the beautiful, textured quality of hand-drawn art.</p>
-                    <a href="#portfolio" class="cta-secondary">See My Work</a>
-                </div>
-                <div class="about-image-placeholder">
-                    <div class="image-box">Photo of Artist Akash</div>
-                </div>
+      <section id="about" class="container section-padding">
+        <h2 class="section-title">The Art of Personal Connection</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p style="margin: 15px">
+              Hi, I’m Akash, and to me, a portrait isn’t just a drawing — it’s a
+              moment, a memory, and a feeling captured forever. I create
+              hand-drawn pencil and charcoal portraits that focus on emotion and
+              depth, not just likeness. Every line I draw aims to reflect the
+              soul behind the face — the smile, the silence, the story. Using
+              professional-grade graphite and charcoal on archival-quality
+              paper,
+            </p>
+            <p style="margin: 15px">
+              I craft each piece with care and patience, bringing out realistic
+              textures and soft light–shadow balance that give every sketch a
+              photo-like depth while keeping the warmth of handmade art. Whether
+              it’s a gift or a personal keepsake, my goal is simple — to turn
+              your favorite photo into a timeless piece of art that feels alive
+              every time you look at it.
+            </p>
+            <a href="#portfolio" class="cta-secondary">See My Work</a>
+          </div>
+          <div class="about-image-placeholder">
+            <div class="image-box">
+              <img src="./images/me.png" alt="Artist image" />
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="prices" class="dark-section section-padding">
-            <div class="container">
-                <h2 class="section-title white-text">Commission Packages</h2>
-                <div class="price-grid">
-                    <div class="price-card">
-                        <h3>Mini Portrait</h3>
-                        <p>Head and shoulders. Ideal for simple gifts or small desks. Single subject. (A5 size)</p>
-                        <p class="price-tag accent-text">Starting From: $75</p>
-                    </div>
-                    <div class="price-card">
-                        <h3>Full Portrait</h3>
-                        <p>Head, shoulders, and partial torso/detailed background. Single subject. (A4 size)</p>
-                        <p class="price-tag accent-text">Starting From: $150</p>
-                    </div>
-                    <div class="price-card">
-                        <h3>Deluxe Duo</h3>
-                        <p>Full portrait for two subjects. Perfect for couples or siblings. Complex composition. (A3 size)</p>
-                        <p class="price-tag accent-text">Starting From: $250</p>
-                    </div>
-                    <div class="price-card custom-quote-card">
-                        <h3>Custom Size/Group</h3>
-                        <p>For larger paper sizes, three or more subjects, or complex scenes.</p>
-                        <p class="price-tag accent-text-secondary">Quote Upon Request</p>
-                    </div>
-                </div>
-                <div class="special-offer">
-                    <p>🌟 **Looking for a deal?** I occasionally run special promotions and seasonal discounts for my loyal clients and new commissions. Contact me directly to see if your order qualifies for any current savings.</p>
-                </div>
-                <a href="#contact" class="cta-primary center-cta">Request a Custom Quote</a>
+      <section id="prices" class="dark-section section-padding">
+        <div class="container">
+          <h2 class="section-title white-text">Commission Packages</h2>
+          <div class="price-grid">
+            <div class="price-card">
+              <h3>Mini Portrait</h3>
+              <p>
+                Head and shoulders. Ideal for simple gifts or small desks.
+                Single subject. (A5 size)
+              </p>
+              <p class="price-tag accent-text">Starting From: $75</p>
             </div>
-        </section>
-
-        <section id="portfolio" class="container section-padding">
-            <h2 class="section-title">The Gallery: Stories in Graphite</h2>
-            <p class="section-subtitle">A selection of my best custom portraits and sketches.</p>
-            <div class="portfolio-grid">
-                <div class="sketch-card">
-                    <div class="sketch-image-placeholder">
-                        <img src="./images/photodefault.jpeg">
-                    </div>
-                    <p>Graphite on A3 - Lord Ganesha Drawing </p>
-                </div>
-                <div class="sketch-card">
-                    <div class="sketch-image-placeholder"><img src="./images/photoone.jpeg"></div>
-                    <p>Graphite Pencil - Indian Lady Sketch</p>
-                </div>
-                <div class="sketch-card">
-                    <div class="sketch-image-placeholder"><img src="./images/phototwo.jpeg"></div>
-                    <p>Couples Sketch - Soft Focus -commission</p>
-                </div>
-                <div class="sketch-card">
-                    <div class="sketch-image-placeholder"><img src="./images/photothree.jpeg"></div>
-                    <p>Graphite sketch on Dairy- Akash vishwakarma</p>
-                </div>
-                <div class="sketch-card">
-                    <div class="sketch-image-placeholder"><img src="./images/photofour.jpeg"></div>
-                    <p>Graphite Pencil - College professor potrait</p>
-                </div>
-                <div class="sketch-card">
-                    <div class="sketch-image-placeholder"><img src="./images/photofive.jpeg"></div>
-                    <p>Custom Commission - on demand</p>
-                </div>
+            <div class="price-card">
+              <h3>Full Portrait</h3>
+              <p>
+                Head, shoulders, and partial torso/detailed background. Single
+                subject. (A4 size)
+              </p>
+              <p class="price-tag accent-text">Starting From: $150</p>
             </div>
-            <a href="#contact" class="cta-secondary center-cta">Ready to Commission Your Piece?</a>
-        </section>
-
-        <section id="testimonials" class="dark-section section-padding">
-            <div class="container">
-                <h2 class="section-title white-text">What Clients Say</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <i class="fas fa-quote-left accent-text"></i>
-                        <p>"Akash captured my father's likeness perfectly. The detail in the eyes was incredible. It was the most meaningful gift I've ever given. Highly recommend!"</p>
-                        <p class="client-name">— Neha S.</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <i class="fas fa-quote-left accent-text"></i>
-                        <p>"The process was seamless, and the finished piece was breathtaking. The charcoal texture gave the portrait such a high-end feel. True talent!"</p>
-                        <p class="client-name">— Ravi K.</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <i class="fas fa-quote-left accent-text"></i>
-                        <p>"Absolutely stunning work! I commissioned a piece for my anniversary, and my partner was speechless. Akash is professional and an absolute pleasure to work with."</p>
-                        <p class="client-name">— Priya L.</p>
-                    </div>
-                </div>
-                <a href="#contact" class="cta-primary center-cta">Let's Create Your Moment</a>
+            <div class="price-card">
+              <h3>Deluxe Duo</h3>
+              <p>
+                Full portrait for two subjects. Perfect for couples or siblings.
+                Complex composition. (A3 size)
+              </p>
+              <p class="price-tag accent-text">Starting From: $250</p>
             </div>
-        </section>
-
-        <section id="contact" class="container section-padding">
-            <h2 class="section-title accent-text">Start Your Commission Today</h2>
-            <p class="section-subtitle">I'm excited to hear about your vision! Please reach out with your photo reference and desired package, and I'll get back to you with a personalized quote and timeline.</p>
-
-            <div class="contact-options">
-                <a href="https://wa.me/yourwhatsappnumber" target="_blank" class="contact-link">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>Message on WhatsApp</span>
-                    <p style="color:rgb(214, 92, 92)">Currently unavailable</p>
-                </a>
-                <a href="mailto:akashvishwakarmaservices@gmail.com" class="contact-link">
-                    <i class="fas fa-envelope"></i>
-                    <span>Send Me an Email</span><br>
-                    <p style="color:rgb(214, 92, 92)">Currently unavailable</p>
-                </a>
-                <a href="https://instagram.com/art_by_akash_official" target="_blank" class="contact-link">
-                    <i class="fab fa-instagram"></i>
-                    <span>DM on Instagram</span>
-                </a>
+            <div class="price-card custom-quote-card">
+              <h3>Custom Size/Group</h3>
+              <p>
+                For larger paper sizes, three or more subjects, or complex
+                scenes.
+              </p>
+              <p class="price-tag accent-text-secondary">Quote Upon Request</p>
             </div>
-            <p class="contact-note">No complex forms, just direct contact for a seamless commissioning process.</p>
-        </section>
+          </div>
+          <div class="special-offer">
+            <p>
+              🌟 **Looking for a deal?** I occasionally run special promotions
+              and seasonal discounts for my loyal clients and new commissions.
+              Contact me directly to see if your order qualifies for any current
+              savings.
+            </p>
+          </div>
+          <a href="#contact" class="cta-primary center-cta"
+            >Request a Custom Quote</a
+          >
+        </div>
+      </section>
+
+      <section id="portfolio" class="container section-padding">
+        <h2 class="section-title">The Gallery: Stories in Graphite</h2>
+        <p class="section-subtitle">
+          A selection of my best custom portraits and sketches.
+        </p>
+        <div class="portfolio-grid">
+          <div class="sketch-card">
+            <div class="sketch-image-placeholder">
+              <img src="./images/photodefault.jpeg" />
+            </div>
+            <p>Graphite on A3 - Lord Ganesha Drawing</p>
+          </div>
+          <div class="sketch-card">
+            <div class="sketch-image-placeholder">
+              <img src="./images/photoone.jpeg" />
+            </div>
+            <p>Graphite Pencil - Indian Lady Sketch</p>
+          </div>
+          <div class="sketch-card">
+            <div class="sketch-image-placeholder">
+              <img src="./images/phototwo.jpeg" />
+            </div>
+            <p>Couples Sketch - Soft Focus -commission</p>
+          </div>
+          <div class="sketch-card">
+            <div class="sketch-image-placeholder">
+              <img src="./images/photothree.jpeg" />
+            </div>
+            <p>Graphite sketch on Dairy- Akash vishwakarma</p>
+          </div>
+          <div class="sketch-card">
+            <div class="sketch-image-placeholder">
+              <img src="./images/photofour.jpeg" />
+            </div>
+            <p>Graphite Pencil - College professor potrait</p>
+          </div>
+          <div class="sketch-card">
+            <div class="sketch-image-placeholder">
+              <img src="./images/photofive.jpeg" />
+            </div>
+            <p>Custom Commission - on demand</p>
+          </div>
+        </div>
+        <a href="#contact" class="cta-secondary center-cta"
+          >Ready to Commission Your Piece?</a
+        >
+      </section>
+
+      <section id="testimonials" class="dark-section section-padding">
+        <div class="container">
+          <h2 class="section-title white-text">What Clients Say</h2>
+          <div class="testimonial-grid">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-left accent-text"></i>
+              <p>
+                "Akash captured my father's likeness perfectly. The detail in
+                the eyes was incredible. It was the most meaningful gift I've
+                ever given. Highly recommend!"
+              </p>
+              <p class="client-name">— Neha S.</p>
+            </div>
+            <div class="testimonial-card">
+              <i class="fas fa-quote-left accent-text"></i>
+              <p>
+                "The process was seamless, and the finished piece was
+                breathtaking. The charcoal texture gave the portrait such a
+                high-end feel. True talent!"
+              </p>
+              <p class="client-name">— Ravi K.</p>
+            </div>
+            <div class="testimonial-card">
+              <i class="fas fa-quote-left accent-text"></i>
+              <p>
+                "Absolutely stunning work! I commissioned a piece for my
+                anniversary, and my partner was speechless. Akash is
+                professional and an absolute pleasure to work with."
+              </p>
+              <p class="client-name">— Priya L.</p>
+            </div>
+          </div>
+          <a href="#contact" class="cta-primary center-cta"
+            >Let's Create Your Moment</a
+          >
+        </div>
+      </section>
+
+      <section id="contact" class="container section-padding">
+        <h2 class="section-title accent-text">Start Your Commission Today</h2>
+        <p class="section-subtitle">
+          I'm excited to hear about your vision! Please reach out with your
+          photo reference and desired package, and I'll get back to you with a
+          personalized quote and timeline.
+        </p>
+
+        <div class="contact-options">
+          <a
+            href="https://wa.me/yourwhatsappnumber"
+            target="_blank"
+            class="contact-link"
+          >
+            <i class="fab fa-whatsapp"></i>
+            <span>Message on WhatsApp</span>
+            <p style="color: rgb(214, 92, 92)">Currently unavailable</p>
+          </a>
+          <a
+            href="mailto:akashvishwakarmaservices@gmail.com"
+            class="contact-link"
+          >
+            <i class="fas fa-envelope"></i>
+            <span>Send Me an Email</span><br />
+            <p style="color: rgb(214, 92, 92)">Currently unavailable</p>
+          </a>
+          <a
+            href="https://instagram.com/art_by_akash_official"
+            target="_blank"
+            class="contact-link"
+          >
+            <i class="fab fa-instagram"></i>
+            <span>DM on Instagram</span>
+          </a>
+        </div>
+        <p class="contact-note">
+          No complex forms, just direct contact for a seamless commissioning
+          process.
+        </p>
+      </section>
     </main>
 
     <footer>
-        <div class="container footer-content">
-            <div class="footer-branding">
-                <p>Art by Akash: Where every line tells a story.</p>
-            </div>
-            <div class="footer-social">
-                <a href="https://instagram.com/art_by_akash_official" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://youtube.com/@art_by_akash" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
-            <div class="footer-copyright">
-                &copy; 2025 Art by Akash. All Rights Reserved.
-            </div>
+      <div class="container footer-content">
+        <div class="footer-branding">
+          <p>Art by Akash: Where every line tells a story.</p>
         </div>
+        <div class="footer-social">
+          <a
+            href="https://instagram.com/art_by_akash_official"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://youtube.com/@art_by_akash"
+            target="_blank"
+            aria-label="YouTube"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+        <div class="footer-copyright">
+          &copy; 2025 Art by Akash. All Rights Reserved.
+        </div>
+      </div>
     </footer>
 
     <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById('nav-links');
-            navLinks.classList.toggle('active');
-        }
-        // Closes the menu when a link is clicked on mobile
-        document.querySelectorAll('#nav-links a').forEach(item => {
-            item.addEventListener('click', () => {
-                const navLinks = document.getElementById('nav-links');
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                }
-            })
-        })
+      function toggleMenu() {
+        const navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("active");
+      }
+      // Closes the menu when a link is clicked on mobile
+      document.querySelectorAll("#nav-links a").forEach((item) => {
+        item.addEventListener("click", () => {
+          const navLinks = document.getElementById("nav-links");
+          if (navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+          }
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
