@@ -596,6 +596,20 @@ footer {
     }
 }
 
+.sketch-card{
+   width: 100%;
+  height: 300px;      /* or whatever fixed height you want */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* show entire image */
+  background-color:lightblue; 
+}
 /* Placeholder content styling adjustments */
 .image-box, .sketch-image-placeholder {
     color: rgba(241, 241, 241, 0.4); 
